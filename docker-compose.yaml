@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  kt_server:
+    container_name: kt_server
+    build: .
+    volumes:
+      - .:/work
+      - gradle_cache:/home/gradle/.gradle/caches
+    ports:
+      - 8080:8080
+
+volumes:
+  gradle_cache:
+

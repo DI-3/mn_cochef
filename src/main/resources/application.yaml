@@ -1,0 +1,25 @@
+#spring.datasource.url=jdbc:postgresql://localhost:5432/kitchen
+#spring.datasource.username=postgres
+#spring.datasource.password=password123
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQL81Dialect
+#server.port=8081
+
+spring:
+  application:
+    name: recipe
+  datasource:
+    url: "jdbc:postgresql://host.docker.internal:5432/kitchen"
+    username: "postgres"
+    password: "password123"
+  jpa:
+    hibernate:
+      jdbc:
+        time_zone: UTC
+        ddl-auto: "update"
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: "org.hibernate.dialect.PostgreSQL81Dialect"
